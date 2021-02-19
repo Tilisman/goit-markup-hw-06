@@ -60,11 +60,18 @@ address {
     font-style: normal;
 }
 
+*:hover,
+*:focus {
+    transition: 250ms;
+}
+
 
 /* Header */
 
 .header {
-    border-bottom: 0.05em solid #ececec;
+    border-bottom: 0.025em solid #ececec;
+    display: flex;
+    box-sizing: border-box;
 }
 
 
@@ -133,10 +140,13 @@ address {
     font-size: 14px;
     line-height: 1.142;
     letter-spacing: 0.02em;
+    transition: 250ms;
 }
 
 .nav-list .link::after {
     display: block;
+    position: relative;
+    top: 28px;
     content: '';
     height: 4px;
     width: 100%;
@@ -153,6 +163,7 @@ address {
 .nav-list .link:hover,
 .nav-list .link:focus {
     color: var(--accent-color);
+    transition: 250ms;
 }
 
 .nav-list .link:hover::after,
@@ -189,6 +200,7 @@ address {
     letter-spacing: 0.02em;
     padding-top: 25px;
     padding-bottom: 25px;
+    transition: 250ms;
 }
 
 .contacts-list li:not(:first-child) {
@@ -198,6 +210,8 @@ address {
 .contacts-list .link:hover,
 .contacts-list .link:focus {
     color: var(--accent-color);
+    transition: 250ms;
+    transform: scale(1.1);
 }
 
 .contact-link-icon {
