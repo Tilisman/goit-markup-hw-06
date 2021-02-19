@@ -1,0 +1,103 @@
+.title.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* ===CONTAINER=== */
+
+.portfolio-container {
+    width: var(--cont-width);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+
+/* Button list */
+
+.btn-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.btn-list li {
+    background-color: var(--primary-white);
+    margin-left: 8px;
+}
+
+.btn-list button {
+    border: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 6px 21px;
+}
+
+.btn-list button:focus,
+.btn-list button:hover {
+    color: var(--primary-white);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Portfolio Section */
+
+.portfolio.section {
+    padding: 94px 0;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-left: calc(-1 * var(--set-gap));
+    margin-top: calc(-1 * var(--set-gap));
+}
+
+.portfolio-list>.item {
+    flex-basis: calc(100% / 3 - var(--set-gap));
+    border: 1px solid #eeeeee;
+    text-align: left;
+    margin-left: var(--set-gap);
+    margin-top: var(--set-gap);
+}
+
+.portfolio-list>.item:hover,
+.portfolio-list>.item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list-text {
+    padding: 20px 24px;
+}
+
+.portfolio-list p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+}
+
+.portfolio-list .list-title {
+    margin-bottom: 4px;
+}
