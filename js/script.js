@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", init)
+// window.addEventListener("DOMContentLoaded", init)
 
 function init() {
     const { height: pageHeaderHeight } = document
@@ -8,3 +8,5 @@ function init() {
     document.body.style.paddingTop = `${pageHeaderHeight}px`;
 
 }
+
+init();
