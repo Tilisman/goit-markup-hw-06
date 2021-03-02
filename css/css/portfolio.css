@@ -49,6 +49,7 @@
     text-align: center;
     letter-spacing: 0.03em;
     padding: 6px 21px;
+    transition: 250ms;
 }
 
 .btn-list button:focus,
@@ -56,6 +57,7 @@
     color: var(--primary-white);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: 250ms;
 }
 
 
@@ -74,13 +76,7 @@
     margin-top: calc(-1 * var(--set-gap));
 }
 
-.portfolio-thumb {
-    position: relative;
-    overflow: hidden;
-}
-
 .portfolio-list>.item {
-    position: relative;
     flex-basis: calc(100% / 3 - var(--set-gap));
     border: 1px solid #eeeeee;
     text-align: left;
@@ -88,8 +84,14 @@
     margin-top: var(--set-gap);
 }
 
-.portfolio-list>.item:hover,
-.portfolio-list>.item:focus {
+.card-link {
+    display: block;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+.card-link:hover,
+.card-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -107,34 +109,4 @@
 
 .portfolio-list .list-title {
     margin-bottom: 4px;
-}
-
-
-/* === OVERLAY === */
-
-.overlay {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding: 63px 24px;
-    background-color: rgba(33, 150, 243, 0.9);
-    opacity: 1;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-}
-
-.portfolio-list>.item:hover .overlay,
-.portfolio-list>.item:focus .overlay {
-    opacity: 1;
-    transform: translateY(-100%);
-}
-
-p.overlay-text {
-    color: var(--primary-white);
 }
