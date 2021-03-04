@@ -1,5 +1,3 @@
-// window.addEventListener("DOMContentLoaded", init)
-
 function init() {
     const { height: pageHeaderHeight } = document
         .querySelector(".page-header")
