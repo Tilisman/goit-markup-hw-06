@@ -458,11 +458,37 @@
                         <use href="./sprite.svg#close"></use>
                     </svg>
                 </button>
-        </div>
-    </div>
 
-    <script src="./js/modal.js"></script>
-    <script src="./js/script.js"></script>
+            <form class="form">
+                <div class="form-group" role="group" aria-labelby="contact-details-head">
+                    <p class="contact-details-head">Оставьте свои данные, мы вам перезвоним</p>
+                    <label class="modal-label">
+      <div class="modal-label-name">Имя</div>
+      <input class="modal-input" type="text" name="username" />
+    </label>
+                    <label class="modal-label">
+      <div class="modal-label-name">Телефон</div>
+      <input class="modal-input" type="phone" name="phone" />
+    </label>
+                    <label class="modal-label">
+      <div class="modal-label-name">Почта</div>
+      <input class="modal-input" type="email" name="email" />
+    </label>
+                    <label class="modal-label comment">
+                        <div class="modal-label-name">Комментарий</div>
+        <textarea class="modal-textarea" name="comment" rows="5" placeholder="Введите текст"></textarea>
+    </label>
+                </div>
+                <div class="modal-checkbox"></div>
+                <label class="modal-label checkbox">
+                    <input class="modal-checkbox-input" type="checkbox">
+                    <span class="modal-checkbox-text">Соглашаюсь с рассылкой и принимаю <a href="./portfolio.html">Условия договора</a></span>
+</label>
+                <button type="submit" class="order-btn">Отправить</button>
+            </form>
+
+            <script src="./js/modal.js"></script>
+            <script src="./js/script.js"></script>
 </body>
 
 </html>
