@@ -1,4 +1,4 @@
-/* === HERO === */
+/* !=== HERO ===! */
 
 .hero-container {
     max-width: var(--cont-width);
@@ -40,43 +40,8 @@
     text-transform: uppercase;
 }
 
-.button-modal-close svg {
-    display: flex;
-    justify-content: center;
-    fill: currentColor;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.button-modal-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: currentColor;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-
-.button-modal-close svg {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-modal-close svg:hover {
-    color: var(--accent-color);
-    cursor: pointer;
-}
-
-
-/* === SECTION === */
+/* !=== SECTION ===! */
 
 .section-title {
     font-style: normal;
@@ -97,7 +62,7 @@
 }
 
 
-/* Features Section */
+/* !=== Features Section ===! */
 
 .features-container {
     max-width: var(--cont-width);
@@ -136,7 +101,6 @@
 }
 
 .features-list>.item {
-    /* max-width: 270px; */
     flex-basis: calc(100% / 4);
     margin-left: var(--set-gap);
     margin-top: var(--set-gap);
@@ -200,7 +164,7 @@
 }
 
 
-/* About Section */
+/* !=== About Section ===! */
 
 .about-container {
     max-width: var(--cont-width);
@@ -254,7 +218,7 @@
 }
 
 
-/* ===Team Section=== */
+/* !=== Team Section ===! */
 
 .team-container {
     width: var(--cont-width);
@@ -304,45 +268,7 @@
 }
 
 
-/* .social-link-list {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.social-link {
-    display: inline-flex;
-    justify-content: center;
-    color: var(--primary-icon-color);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-}
-
-.social-link:hover,
-.social-link:focus {
-    color: var(--primary-white);
-    background-color: var(--accent-color);
-}
-
-.social-link-list>.item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.social-link-list .item {
-    box-shadow: none;
-    margin-bottom: 30px;
-}
-
-.social-link-icon {
-    width: 20px;
-    height: auto;
-    fill: currentColor;
-} */
-
-
-/* Clients Section */
+/* !=== Clients Section ===! */
 
 .section.clients {
     padding: 94px 0;
@@ -380,7 +306,7 @@
     color: var(--primary-icon-color);
     border: 1px solid currentColor;
     border-radius: 4px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms var(--trans-time);
 }
 
 .client-link:hover,
@@ -392,5 +318,4 @@
     display: block;
     fill: currentColor;
     max-height: 90px;
-    /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }

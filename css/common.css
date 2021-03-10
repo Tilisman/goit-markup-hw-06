@@ -13,7 +13,8 @@
     --modal-form-sec-col: rgba(33, 33, 33, 0.2);
     --cont-width: 1200px;
     --set-gap: 30px;
-    --trans-time: cubic-bezier(0.4, 0, 0.2, 1);
+    --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+    --primary-trans-time: 250ms;
 }
 
 body {
@@ -88,10 +89,10 @@ address {
 }
 
 
-/* Header */
+/* !=== Header ===! */
 
 
-/* ===Header container=== */
+/* Header container */
 
 .header-container {
     width: var(--cont-width);
@@ -123,7 +124,7 @@ address {
 }
 
 
-/* logo */
+/* Logo */
 
 .logo-header {
     color: var(--title-text-color);
@@ -160,19 +161,16 @@ address {
 }
 
 .nav-list .link {
-    /* position */
     position: relative;
     display: inline-block;
     padding-top: 30px;
     padding-bottom: 30px;
-    /* font+color */
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.142;
     letter-spacing: 0.02em;
-    /* animation */
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .nav-list .link::after {
@@ -185,7 +183,7 @@ address {
     background-color: var(--accent-color);
     border-radius: 2px;
     transform: scaleX(0);
-    transition: 250ms transform ease-in-out;
+    transition: var(--primary-trans-time) transform ease-in-out;
 }
 
 .nav-list li:not(:first-child) {
@@ -231,7 +229,7 @@ address {
     letter-spacing: 0.02em;
     padding-top: 25px;
     padding-bottom: 25px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .contacts-list li:not(:first-child) {
@@ -269,7 +267,7 @@ address {
 }
 
 
-/* Footer */
+/* !=== Footer ===! */
 
 .footer {
     align-items: left;
@@ -280,6 +278,8 @@ address {
 .footer-decor-container {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    max-width: 1170px;
 }
 
 .footer-container {
@@ -288,7 +288,6 @@ address {
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    justify-content: left;
     padding: 0 15px;
 }
 
@@ -323,7 +322,7 @@ address {
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .footer-adress-container {
@@ -344,13 +343,6 @@ address {
     margin-bottom: 0;
 }
 
-.social-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 70px;
-}
-
 .footer-title {
     color: var(--primary-white);
     font-weight: bold;
@@ -362,7 +354,14 @@ address {
 }
 
 
-/* Social Links */
+/* !=== Footer Social Links ===! */
+
+.social-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+}
 
 .footer-social-list {
     display: flex;
@@ -378,7 +377,7 @@ address {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .footer-social-link:hover,
@@ -406,7 +405,7 @@ address {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .social-link:hover,
@@ -435,7 +434,7 @@ address {
 }
 
 
-/* === SUBSCRIPTION FORM FOOTER */
+/* !=== SUBSCRIPTION FORM FOOTER ===! */
 
 .footer-subscribtion {
     display: flex;
@@ -490,7 +489,7 @@ address {
 }
 
 
-/* === MODAL === */
+/* !=== MODAL ===! */
 
 .backdrop {
     position: fixed;
@@ -500,7 +499,7 @@ address {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
     transform: scaleY(1);
 }
 
@@ -508,6 +507,14 @@ address {
     opacity: 0;
     pointer-events: none;
     transform: scaleY(0);
+}
+
+.modal+.backdrop.is-hidden {
+    transform: translateX(0);
+}
+
+.modal+.backdrop {
+    transform: translateX(1);
 }
 
 .modal {
@@ -527,11 +534,13 @@ address {
 /* === FORM === */
 
 form input {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: 40px;
+    transition: color var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 form textarea {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    height: 120px;
+    transition: color var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .form {
@@ -571,7 +580,7 @@ form textarea {
 }
 
 .modal-input {
-    padding: 12px 16px;
+    padding: 10px 16px;
     padding-left: 42px;
     border: 1px solid var(--modal-form-sec-col);
     border-radius: 10px;
@@ -673,8 +682,42 @@ form textarea {
     background-color: var(--primary-btn-accent);
 }
 
+.button-modal-close svg {
+    display: flex;
+    justify-content: center;
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
+}
 
-/* PRIMARY BUTTON */
+.button-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.button-modal-close svg {
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
+}
+
+.button-modal-close svg:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+
+/* !=== PRIMARY BUTTON ===! */
 
 .btn-primary {
     background-color: var(--accent-color);
@@ -690,7 +733,7 @@ form textarea {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary-trans-time) var(--primary-cubic-bezier);
 }
 
 .btn-primary:hover .backdrop,

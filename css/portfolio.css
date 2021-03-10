@@ -12,7 +12,7 @@
 }
 
 
-/* ===CONTAINER=== */
+/* !=== CONTAINER ===! */
 
 .portfolio-container {
     width: var(--cont-width);
@@ -25,7 +25,7 @@
 }
 
 
-/* Button list */
+/* !=== Button List === */
 
 .btn-list {
     display: flex;
@@ -60,7 +60,7 @@
 }
 
 
-/* Portfolio Section */
+/* !=== Portfolio Section ===! */
 
 .portfolio.section {
     padding: 94px 0;
@@ -111,7 +111,7 @@
 }
 
 
-/* === OVERLAY === */
+/* !=== OVERLAY ===! */
 
 .overlay {
     position: absolute;
